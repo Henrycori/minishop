@@ -45,8 +45,7 @@ class ProductServiceTest {
         // ACT
         Product result = productService.save(input);
 
-        // ASSERT - ERROR DELIBERADO INTRODUCIDO AQUÍ:
-        // El ID real retornado por el mock es 1L, pero exigimos que sea 99999L para romper la prueba.
+        // ASSERT - ERROR INTENCIONAL
         assertThat(result.getId()).isEqualTo(99999L); 
         
         assertThat(result.getName()).isEqualTo("Auriculares Sony");
