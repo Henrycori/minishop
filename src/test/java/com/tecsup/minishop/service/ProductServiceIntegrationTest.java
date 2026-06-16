@@ -45,9 +45,8 @@ class ProductServiceTest {
         // ACT
         Product result = productService.save(input);
 
-        // ASSERT - ERROR INTENCIONAL
-        assertThat(result.getId()).isEqualTo(99999L); 
-        
+        // ASSERT
+        assertThat(result.getId()).isEqualTo(1L);
         assertThat(result.getName()).isEqualTo("Auriculares Sony");
         verify(productRepository, times(1)).save(any(Product.class));
     }
